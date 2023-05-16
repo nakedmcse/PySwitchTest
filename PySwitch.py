@@ -15,11 +15,7 @@ def elifTree(choice):
 
 # Dictionary
 def dictLookup(choice):
-    cases = {
-            "winter": "growing",
-            "growing": "harvest",
-            "harvest": "winter"
-    }
+    global cases
     return cases.get(choice,"unknown")
 
 # Match
@@ -36,6 +32,14 @@ def matchTest(choice):
 
 # Main
 testlist = ["winter","growing","harvest","notacase"]
+
+# define dictionary globally
+cases = {
+        "winter": "growing",
+        "growing": "harvest",
+        "harvest": "winter"
+}
+
 print()
 print("Starting Switch Test")
 print()
